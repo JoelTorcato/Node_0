@@ -1,0 +1,31 @@
+###
+POST http://localhost:3333/videos
+Content-Type: application/json
+
+{
+  "title": "01 Video",
+  "description": "Description 01",
+  "duration": 180,
+  "channel": "Joel"
+}
+
+###
+GET http://localhost:3333/videos
+
+###
+
+###
+PUT http://localhost:3333/videos/8b2c375b-90b8-43c5-9180-9d090d0f30c4
+Content-Type: application/json
+
+{
+  "title": "02 Video NOde",
+  "description": "Description 02 Node",
+  "duration": 200,
+  "channel": "Rocketseat"
+}
+
+###
+
+###
+DELETE http://localhost:3333/videos/f1ddded5-2ea7-4c35-9a75-14790f7c4cfb
