@@ -6,7 +6,6 @@ export class DatabasePostgres {
     let videos;
 
     if (search) {
-      // Corrige a sintaxe para busca parcial com ILIKE
       videos = await sql`SELECT * FROM videos WHERE title ILIKE ${'%' + search + '%'}`;
     } else {
       videos = await sql`SELECT * FROM videos`;

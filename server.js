@@ -10,7 +10,7 @@ const database = new DatabasePostgres()
 // Request Body
 
 server.post('/videos', async (request, reply) => { // POST is used to submit data to be processed by the server
-  const { title, description, duration, channel } = request.body
+  const { title, description, duration, channel } = request.body // See better
 
   await database.create({
     title, // title, = title: title; (Short syntax)
@@ -30,7 +30,7 @@ server.post('/videos', async (request, reply) => { // POST is used to submit dat
 })
 
 server.get('/videos', async (request) => {
-  const search = request.query.search
+  const search = request.query.search // Study query parameters
 
   const videos = await database.list(search)
 
@@ -44,8 +44,7 @@ server.put('/videos/:id', async (request, reply) => { // PUT is used to update o
   await database.update(videoId, {
     title, 
     description,
-    duration,
-    channel,
+    // Here
   })
 
   return reply.status(204).send
