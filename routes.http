@@ -1,18 +1,16 @@
-###
 POST https://node-0-crof.onrender.com/videos
 Content-Type: application/json
 
 {
-  "title": "01 Video",
-  "description": "Description 01",
+  "title": "05 Video",
+  "description": "Description 05",
   "duration": 180,
-  "channel": "Joel"
+  "channel": "Joel",
+  "idGeneral": 0
 }
 
 ###
 GET https://node-0-crof.onrender.com/videos
-
-###
 
 ###
 PUT https://node-0-crof.onrender.com/videos/bfbb45bb-c1d9-4b62-bd40-f48d70dd2060
@@ -26,6 +24,4 @@ Content-Type: application/json
 }
 
 ###
-
-###
-DELETE https://node-0-crof.onrender.com/videos/bfbb45bb-c1d9-4b62-bd40-f48d70dd2060
+DELETE https://node-0-crof.onrender.com/videos/02c51581-ecf1-4afc-991a-b5fcee97c0ba

@@ -8,7 +8,7 @@ import { sql } from './db.js';
         title TEXT,
         description TEXT,
         duration INTEGER,
-        channel TEXT
+        channel TEXT,
       );
     `;
     console.log('Table "videos" created successfully!');
