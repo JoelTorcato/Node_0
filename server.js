@@ -1,37 +1,24 @@
 import { fastify } from 'fastify'
-// import { DatabaseMemory } from './database-memory.js'
 import { DatabasePostgres } from './database-postgres.js'
 
-
 const server = fastify() 
-// const database = new DatabaseMemory() // database = DatabaseMemory()
 const database = new DatabasePostgres()
 
-// Request Body
+server.post('/videos', async (request, reply) => {
+  const { title, description, duration, channel } = request.body // Destructuring
 
-server.post('/videos', async (request, reply) => { // POST is used to submit data to be processed by the server
-  const { title, description, duration, channel } = request.body // See better
-
-  await database.create({
-    title, // title, = title: title; (Short syntax)
+  await database.create (video, {
+    title,
     description,
     duration,
     channel,
   })
-  
-  /* request: Contains all information about the incoming 
-  HTTP request (headers, query parameters, body, etc.).
 
-  // request.body: Contains the data sent by the client in the 
-  request body, which is typically used for operations like creating 
-  or updating resources */
-
-  return reply.status(201).send() // We create something
+  return reply.status(201).send()
 })
 
 server.get('/videos', async (request) => {
-  const search = request.query.search // Study query parameters
-
+  const search = request.query.search
   const videos = await database.list(search)
 
   return videos
@@ -39,12 +26,11 @@ server.get('/videos', async (request) => {
 
 server.put('/videos/:id', async (request, reply) => { // PUT is used to update or replace a resource on the server
   const videoId = request.params.id
-  const { title, description, duration, channel } = request.body
+  const { title, description } = request.body
 
   await database.update(videoId, {
     title, 
     description,
-    // Here
   })
 
   return reply.status(204).send

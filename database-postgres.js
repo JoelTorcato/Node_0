@@ -5,16 +5,20 @@ export class DatabasePostgres {
   async list(search) {
     let videos;
 
-    if (search) {
-      videos = await sql`SELECT * FROM videos WHERE title ILIKE ${'%' + search + '%'}`;
-    } else {
+    if (search) 
+    {
+      videos = await sql`SELECT * FROM videos 
+      WHERE id = ${search}
+      OR title ILIKE ${'%' + search + '%'}`;
+    } else 
+    {
       videos = await sql`SELECT * FROM videos`;
     }
-
     return videos;
   }
 
-  async create(video) {
+  async create(video) 
+  {
     const videoId = randomUUID();
     const { title, description, duration, channel } = video;
 
@@ -28,7 +32,8 @@ export class DatabasePostgres {
     await sql`update videos set title = ${title}, description = ${description}, duration = ${duration}, channel = ${channel} WHERE id = ${id}`
   }
 
-  async delete(id) {
+  async delete(id) 
+  {
     await sql`delete from videos where id = ${id}`
   }
 }
