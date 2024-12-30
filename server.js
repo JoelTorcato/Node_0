@@ -7,7 +7,7 @@ const database = new DatabasePostgres()
 server.post('/videos', async (request, reply) => {
   const { title, description, duration, channel } = request.body // Destructuring
 
-  await database.create (video, {
+  await database.create ({
     title,
     description,
     duration,

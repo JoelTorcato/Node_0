@@ -13,15 +13,15 @@ Content-Type: application/json
 GET https://node-0-crof.onrender.com/videos?search=6cb61389-840c-4bc9-bd5b-eec174f2ad7c
 
 ###
-PUT https://node-0-crof.onrender.com/videos/bfbb45bb-c1d9-4b62-bd40-f48d70dd2060
+PUT https://node-0-crof.onrender.com/videos/6cb61389-840c-4bc9-bd5b-eec174f2ad7c
 Content-Type: application/json
 
 {
-  "title": "02 Video Node",
+  "title": "Video Update",
   "description": "Description 02 Node",
   "duration": 200,
   "channel": "Rocketseat"
 }
 
 ###
-DELETE https://node-0-crof.onrender.com/videos/02c51581-ecf1-4afc-991a-b5fcee97c0ba
+DELETE https://node-0-crof.onrender.com/videos/6cb61389-840c-4bc9-bd5b-eec174f2ad7c
