@@ -11,7 +11,7 @@ server.post('/videos', async (request, reply) => {
     title,
     description,
     duration,
-    channel,
+    channel
   })
 
   return reply.status(201).send()
@@ -26,14 +26,16 @@ server.get('/videos', async (request) => {
 
 server.put('/videos/:id', async (request, reply) => { // PUT is used to update or replace a resource on the server
   const videoId = request.params.id
-  const { title, description } = request.body
+  const { title, description, duration, channel } = request.body
 
   await database.update(videoId, {
     title, 
     description,
+    duration,
+    channel
   })
 
-  return reply.status(204).send
+  return reply.status(204).send()
 })
 
 server.delete('/videos/:id', async (request, reply) => {

@@ -2,26 +2,26 @@ POST https://node-0-crof.onrender.com/videos
 Content-Type: application/json
 
 {
-  "title": "05 Video",
-  "description": "Description 05",
-  "duration": 180,
+  "title": "Teste Video PUT",
+  "description": "Try do a new things",
+  "duration": 195,
   "channel": "Joel",
-  "idGeneral": 0
 }
 
 ###
-GET https://node-0-crof.onrender.com/videos?search=6cb61389-840c-4bc9-bd5b-eec174f2ad7c
+GET https://node-0-crof.onrender.com/videos?search=d1685472-b8fa-4edb-8452-6e7667a8c2d7
+Content-Type: application/json
 
 ###
-PUT https://node-0-crof.onrender.com/videos/6cb61389-840c-4bc9-bd5b-eec174f2ad7c
+PUT https://node-0-crof.onrender.com/videos/d1685472-b8fa-4edb-8452-6e7667a8c2d7
 Content-Type: application/json
 
 {
-  "title": "Video Update",
-  "description": "Description 02 Node",
-  "duration": 200,
-  "channel": "Rocketseat"
+  "title": "Video Update 2",
+  "description": "Description 02 Update",
+  "duration": "205",
+  "channel": "Simão"
 }
 
 ###
-DELETE https://node-0-crof.onrender.com/videos/6cb61389-840c-4bc9-bd5b-eec174f2ad7c
+DELETE https://node-0-crof.onrender.com/videos/d1685472-b8fa-4edb-8452-6e7667a8c2d7
