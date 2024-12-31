@@ -2,14 +2,14 @@ POST https://node-0-crof.onrender.com/videos
 Content-Type: application/json
 
 {
-  "title": "Teste Video PUT",
-  "description": "Try do a new things",
-  "duration": 195,
-  "channel": "Joel",
+  "title": "01 Video",
+  "description": "01 Description",
+  "duration": 180,
+  "channel": "Joel Fernandes"
 }
 
 ###
-GET https://node-0-crof.onrender.com/videos
+GET https://node-0-crof.onrender.com/videos?search=Video
 
 ###
 PUT https://node-0-crof.onrender.com/videos/d1685472-b8fa-4edb-8452-6e7667a8c2d7
@@ -23,8 +23,8 @@ Content-Type: application/json
 }
 
 ###
-DELETE https://node-0-crof.onrender.com/videos/641fe9fa-6ad8-4ba3-8475-200cc6ac280e
+DELETE https://node-0-crof.onrender.com/videos/b473ec7b-9b6b-4275-a6c8-1af78454c2c7
 
 ### 
 
-DELETE https://node-0-crof.onrender.com/videos
+// DELETE https://node-0-crof.onrender.com/videos
