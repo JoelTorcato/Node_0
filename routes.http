@@ -24,7 +24,3 @@ Content-Type: application/json
 
 ###
 DELETE https://node-0-crof.onrender.com/videos/980dd937-264c-4c7b-a6e4-4f3fae1da0c1
-
-### 
-
-// DELETE https://node-0-crof.onrender.com/videos

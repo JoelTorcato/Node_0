@@ -1,4 +1,3 @@
-// db.js
 import { neon } from '@neondatabase/serverless';
 import dotenv from 'dotenv';
 
