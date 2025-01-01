@@ -9,21 +9,21 @@ Content-Type: application/json
 }
 
 ###
-GET https://node-0-crof.onrender.com/videos?search=Video
+GET https://node-0-crof.onrender.com/videos
 
 ###
-PUT https://node-0-crof.onrender.com/videos/d1685472-b8fa-4edb-8452-6e7667a8c2d7
+PUT https://node-0-crof.onrender.com/videos/980dd937-264c-4c7b-a6e4-4f3fae1da0c1
 Content-Type: application/json
 
 {
-  "title": "Video Update 2",
-  "description": "Description 02 Update",
+  "title": "Video Update 01",
+  "description": "Description Update 01",
   "duration": "205",
   "channel": "Simão"
 }
 
 ###
-DELETE https://node-0-crof.onrender.com/videos/b473ec7b-9b6b-4275-a6c8-1af78454c2c7
+DELETE https://node-0-crof.onrender.com/videos/980dd937-264c-4c7b-a6e4-4f3fae1da0c1
 
 ### 
 

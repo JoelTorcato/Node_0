@@ -33,8 +33,9 @@ export class DatabasePostgres {
   }
 
   async delete(id) {
-    await sql`delete from videos where id = ${id}::uuid`;
+    await sql`delete from videos where id = ${id}`;
   }
+  
  /* async delete(videos) 
   {
     await sql`delete from videos where videos = ${videos}`

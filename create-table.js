@@ -1,7 +1,9 @@
 import { sql } from './db.js';
 
-(async () => {
-  try {
+(async () => 
+  {
+  try 
+  {
     await sql`
       CREATE TABLE IF NOT EXISTS videos (
         id TEXT PRIMARY KEY,
@@ -12,7 +14,8 @@ import { sql } from './db.js';
       );
     `;
     console.log('Table "videos" created successfully!');
-  } catch (error) {
+  } catch (error) 
+  {
     console.error('Error creating table:', error);
   }
 })();
